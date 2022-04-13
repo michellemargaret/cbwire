@@ -1,0 +1,195 @@
+.calendarRow {
+    position: relative;
+    display: block;
+    margin: 0px 0px 0px 0px;
+    z-index: 0;
+}
+
+.calendarCell, .emptyCalendarCell {
+    float: left;
+    display: relative;
+    border: 1px solid #FFFFFF;
+    width: 30px;
+    height: 15px;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.calendarDayOfTheWeek {
+    float: left;
+    display: relative;
+    border: solid #FFFFFF;
+    border-width: 0px 1px 0px 1px;
+    width: 30px;
+    padding: 1px 0px 1px 0px; 
+    margin: 0px;
+    text-align: center;
+    font-size: xx-small;
+    color: #A9A9A9;
+    z-index: 0;
+}
+
+.calendarCell:hover {
+    background-color: #cd0a0a;
+}
+
+.calendarCell:hover a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.calendarCell a {
+    color: #000000;
+}
+
+.pastCalendarDay a, .nextMonth a {
+    color: #CCCCCC;
+}
+
+.today {
+    border-color: #cd0a0a;
+}
+
+.today a {    
+   color: #cd0a0a;
+}
+
+.nextMonth, .pastCalendarDay {
+    color: #CCCCCC;
+}
+
+.calendarMonth, .calendarHoverDate {
+    display: block;
+    padding: 2px 5px 2px 5px;
+    color: #000000;
+    border-top-color: #cd0a0a;   
+    border-bottom-color: #000099;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.calendarMonth {
+    width: 214px;
+}
+
+.calendarHoverDate {
+    width: 216px;
+    margin-top: 15px;
+    margin-left: -3px;
+}
+
+.calendarEndLine {
+    display: block;
+    width: 223px;
+    border-color: #000099;  
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    margin: 0px 0px 1px 0px;
+}
+
+/* ============================================================================================================================
+== BUBBLE WITH AN ISOCELES TRIANGLE
+** ============================================================================================================================ */
+
+/* THE SPEECH BUBBLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.calendarHover {
+    display: block;
+    position: absolute;
+    width: 220px;
+    max-height: 400px;
+    padding: 0px 3px 13px 3px;
+    margin-top: -9px;
+    margin-left: 38px;
+    background-color: #F1F1F1; /* Old browsers */
+    background: -moz-linear-gradient(top,  #F1F1F1 10%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#F1F1F1), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #F1F1F1 10%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #F1F1F1 10%,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #F1F1F1 10%,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #F1F1F1 10%,#ffffff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F1F1F1', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+   -moz-box-shadow: 5px 5px 10px #888888;
+    -webkit-box-shadow: 5px 5px 10px #888888;
+    box-shadow: 5px 5px 10px #888888;  
+    -webkit-border-radius: 0px 10px 10px 10px;
+    -moz-border-radius: 0px 10px 10px 10px;
+    border-radius: 0px 10px 10px 10px;
+    text-align: center;
+    z-index: 3;
+    overflow: visible;
+}
+
+.hoverListingsContainer {
+    max-height: 350px;
+    padding: 0px;
+    margin: 0px;
+    overflow: auto;
+}
+
+/* Variant : for left/right positioned triangle
+------------------------------------------ */
+
+.calendarHover.left {
+	background:#cd0a0a;
+}
+
+
+/* THE TRIANGLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+/* creates triangle */
+.calendarHover:before {
+    content:"";
+    position:absolute;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    margin-left:-18px; 
+    margin-top: 0px;
+    padding: 0;
+    width: 0; 
+    height: 0; 
+    border-width: 15px 0 0 15px;
+    border-color: #F1F1F1 transparent;
+    border-style: solid;
+}
+
+/* Results
+----------------------------------------------------------------------------------------------------------------------------- */
+
+.calResultRow, .calResultRowAlt {
+    display: block;
+    padding: 5px;
+    margin: 0px;  
+    border-bottom: #D2D2D2 1px solid; 
+    text-align: left;
+}
+
+.calResultRow a, .calResultRowAlt a, .calResultRow, .calResultRowAlt {
+    color: #000099!important;
+}
+
+.calResultRow a:hover, .calResultRowAlt a:hover {
+    color: #000000;
+    text-decoration: none;
+} 
+
+.calResultRow {
+    background-color: #F5F5F5;
+}
+
+.calResultRowAlt {
+    background-color: #FAFAFA;
+}
+
+.calResultRow:hover, .calResultRowAlt:hover, .calResultRow:hover a, .calResultRowAlt:hover a, .calResultRow:hover a:hover, .calResultRowAlt:hover a:hover   {
+    color: #FFFFFF!important;
+}
+
+.calResultRow:hover, .calResultRowAlt:hover {
+    background-color: #cd0a0a;
+}
